@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Koky</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">أهلاً بك في موقعي</a>
+        <nav class="navigation">
+            <a href="#kokytest1">Hello</a>
+            <a href="#hi">hi</a>
+            <a href="#anotherLink">Another Link</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <h2>ادخل الكود لمشاهدة المحتوى</h2>
+            <input type="text" id="codeInput" placeholder="أدخل الكود هنا">
+            <button onclick="checkCode()">إرسال</button>
+            
+            <div id="videoContainer" style="display: none;">
+                <h3>المحتوى:</h3>
+                <iframe id="video" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // بيانات الأكواد والفيديوهات
+        const content = {
+            "content1": {
+                "code": "12345",
+                "videoUrl": "https://www.youtube.com/embed/examplevideoID1"
+            },
+            "content2": {
+                "code": "67890",
+                "videoUrl": "https://www.youtube.com/embed/examplevideoID2"
+            },
+            "content3": {
+                "code": "11223",
+                "videoUrl": "https://player.vimeo.com/video/1006045420?h=8952e7af28"
+            }
+        };
+
+        function checkCode() {
+            const enteredCode = document.getElementById("codeInput").value;
+            let foundContent = null;
+
+            for (let item in content) {
+                if (content[item].code === enteredCode) {
+                    foundContent = content[item];
+                    break;
+                }
+            }
+
+            if (foundContent) {
+                document.getElementById("videoContainer").style.display = "block";
+                document.getElementById("video").src = foundContent.videoUrl;
+            } else {
+                alert("الكود غير صحيح، يرجى المحاولة مرة أخرى.");
+            }
+        }
+    </script>
+</body>
+</html>

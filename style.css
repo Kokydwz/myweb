@@ -1,0 +1,126 @@
+/* تنسيق عام للصفحة */
+body {
+   font-family: 'Cairo', sans-serif;
+   background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+   color: #333;
+   text-align: center;
+   padding: 40px;
+   margin: 0;
+   min-height: 100vh;
+}
+
+/* تنسيق الشريط العلوي */
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #ffffff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+   text-decoration: none;
+   color: #007bff;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 1.8em;
+}
+
+.navigation a {
+   text-decoration: none;
+   color: #007bff;
+   font-weight: 500;
+   font-size: 1.1em;
+   padding: 10px;
+   transition: color 0.3s;
+}
+
+.navigation a:hover {
+   color: #0056b3;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.container {
+   width: 100%;
+   max-width: 420px;
+   margin: 0 auto;
+   background: #ffffff;
+   padding: 30px;
+   border-radius: 12px;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+   font-family: 'Cairo', sans-serif;
+}
+
+/* تنسيق العنوان */
+h2 {
+   font-size: 24px;
+   color: #333;
+   margin-bottom: 20px;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+/* تنسيق حقل الإدخال */
+input[type="text"] {
+   width: 100%;
+   padding: 15px;
+   margin-bottom: 20px;
+   border-radius: 8px;
+   border: 1px solid #ddd;
+   font-size: 16px;
+   outline: none;
+   transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+   border-color: #007bff;
+}
+
+/* تنسيق الزر */
+button {
+   padding: 12px 25px;
+   background-color: #007bff;
+   color: #fff;
+   font-size: 16px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+   background-color: #0056b3;
+   transform: scale(1.05);
+}
+
+/* حاوية الفيديو */
+#videoContainer {
+   display: none;
+   margin-top: 30px;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+iframe {
+   width: 100%;
+   height: 450px;
+   border-radius: 8px;
+   border: none;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #007bff;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: #0056b3;
+}
